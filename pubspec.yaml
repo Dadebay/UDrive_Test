@@ -1,0 +1,50 @@
+name: telegram_chat_app
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: ">=3.3.3 <4.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.6
+  get: 4.6.6
+  flutter_lints:
+  flutter_iconly:
+  flutter_screenutil:
+  lottie: ^3.1.0
+  get_storage:
+  image_picker:
+  cached_network_image: ^3.3.1
+  awesome_bottom_bar: ^1.2.4
+  convex_bottom_bar:
+  flutter_chat_ui: ^1.6.12
+  # flutter_svg:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/fonts/
+    - assets/icons/
+    - assets/lottie/
+    - assets/image/
+
+  fonts:
+    - family: GilroyBold
+      fonts:
+        - asset: assets/fonts/Gilroy-Bold.ttf
+    - family: GilroySemiBold
+      fonts:
+        - asset: assets/fonts/Gilroy-SemiBold.ttf
+    - family: GilroyMedium
+      fonts:
+        - asset: assets/fonts/Gilroy-Medium.ttf
+    - family: GilroyRegular
+      fonts:
+        - asset: assets/fonts/Gilroy-Regular.ttf
+  uses-material-design: true
+  generate: true
