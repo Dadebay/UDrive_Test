@@ -7,18 +7,14 @@ environment:
 
 dependencies:
   cupertino_icons: ^1.0.6
+  carousel_slider:
   get: 4.6.6
-  flutter_lints:
-  flutter_iconly:
   flutter_screenutil:
+  flutter_lints:
+  flutter_svg:
+  flutter_iconly:
   lottie: ^3.1.0
   get_storage:
-  image_picker:
-  cached_network_image: ^3.3.1
-  awesome_bottom_bar: ^1.2.4
-  convex_bottom_bar:
-  flutter_chat_ui: ^1.6.12
-  # flutter_svg:
   flutter:
     sdk: flutter
 

@@ -48,10 +48,11 @@ class _MyAppState extends State<MyApp> {
               bottomSheetTheme: BottomSheetThemeData(backgroundColor: Colors.transparent.withOpacity(0)),
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
+            transitionDuration: const Duration(milliseconds: 500),
+            defaultTransition: Transition.fadeIn,
             fallbackLocale: const Locale('tm'),
             locale: storage.read('langCode') != null ? Locale(storage.read('langCode')) : const Locale('tm'),
             translations: MyTranslations(),
-            defaultTransition: Transition.fade,
             home: const ConnectionCheckView(),
           );
         });

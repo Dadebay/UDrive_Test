@@ -2,12 +2,12 @@
 
 import 'dart:async';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:lottie/lottie.dart';
-import 'package:telegram_chat_app/app/modules/home/views/home_view.dart';
+import 'package:telegram_chat_app/app/modules/auth/views/driver_mechanic.dart';
 import 'package:telegram_chat_app/constants/customWidget/constants.dart';
 
 class ConnectionCheckView extends StatefulWidget {
@@ -33,7 +33,7 @@ class _ConnectionCheckViewState extends State {
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (BuildContext context) {
-                return const HomeView();
+                return const CheckDriverAndMechanic();
               },
             ),
           );
@@ -118,6 +118,17 @@ class _ConnectionCheckViewState extends State {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(backgroundColor: backgroundColor, body: Center(child: Lottie.asset(loadingLottie, width: 70.w, height: 70.h)));
+    return Scaffold(
+        backgroundColor: backgroundColor,
+        body: Column(
+          children: [
+            Expanded(
+              child: Center(child: SvgPicture.asset('assets/icons/logo_black.svg', width: 70, height: 70)),
+            ),
+            const LinearProgressIndicator(
+              color: kPrimaryColor,
+            )
+          ],
+        ));
   }
 }
